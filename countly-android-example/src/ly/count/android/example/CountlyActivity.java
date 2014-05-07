@@ -13,20 +13,20 @@ public class CountlyActivity extends Activity {
         setContentView(R.layout.main);
 
     /** You should use cloud.count.ly instead of YOUR_SERVER for the line below if you are using Countly Cloud service */
-        Countly.sharedInstance().init(this, "https://YOUR_SERVER", "YOUR_APP_KEY");
+        Countly.getInstance().init(this, "https://YOUR_SERVER", "YOUR_APP_KEY");
     }
     
     @Override
     public void onStart()
     {
     	super.onStart();
-        Countly.sharedInstance().onStart();
+        Countly.getInstance().onStart();
     }
 
     @Override
     public void onStop()
     {
-        Countly.sharedInstance().onStop();
+        Countly.getInstance().onStop();
     	super.onStop();
     }
 }
